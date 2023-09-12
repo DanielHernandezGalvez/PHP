@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const App: React.FC = () => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [options, setOptions] = useState<string[]>([]);
   const [randomOption, setRandomOption] = useState<string | null>(null);
 
   useEffect(() => {
     // Cargar opciones desde el almacenamiento local al montar el componente
-    const storedOptions = localStorage.getItem('options');
+    const storedOptions = localStorage.getItem("options");
     if (storedOptions) {
       setOptions(JSON.parse(storedOptions));
     }
@@ -15,13 +15,13 @@ const App: React.FC = () => {
 
   useEffect(() => {
     // Guardar opciones en el almacenamiento local cuando cambian
-    localStorage.setItem('options', JSON.stringify(options));
+    localStorage.setItem("options", JSON.stringify(options));
   }, [options]);
 
   const handleAddOption = () => {
-    if (inputValue.trim() !== '') {
+    if (inputValue.trim() !== "") {
       setOptions([...options, inputValue.trim()]);
-      setInputValue('');
+      setInputValue("");
     }
   };
 
@@ -31,21 +31,42 @@ const App: React.FC = () => {
       setRandomOption(options[randomIndex]);
     } else {
       setRandomOption(null);
-      alert('Agrega al menos una opción primero.');
+      alert("Agrega al menos una opción primero.");
     }
   };
 
+
+    const recargarPestana = () => {
+      window.location.reload();
+    };
+  
+
   return (
-    <div>
-      <h1>Selecciona una opción aleatoria</h1>
+    <div className="container justify-content-center align-items-center">
+      <h1 className="mt-5 text-center">Selecciona una opción aleatoria</h1>
+      <div className="input-group">
       <input
         type="text"
-        placeholder="Agregar opción"
+        className="form-control my-3"
+        placeholder="Agregar opciones"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
-      <button onClick={handleAddOption}>Agregar</button>
-      <button onClick={handlePickRandomOption}>Seleccionar aleatoriamente</button>
+
+           <button className="btn btn-primary my-3" onClick={handleAddOption}>
+          Agregar
+        </button>
+
+      </div>
+      <div className="container d-flex justify-content-evenly">
+   
+        <button className="btn btn-primary" onClick={handlePickRandomOption}>
+          Seleccionar
+        </button>
+        <button className="btn btn-danger" onClick={recargarPestana}>
+        Reiniciar
+      </button>
+      </div>
       <div>
         <h2>Opciones:</h2>
         <ul>
