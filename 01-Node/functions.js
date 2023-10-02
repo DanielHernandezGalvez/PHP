@@ -11,3 +11,4 @@
 module.exports = {
   sumatory: (a, b) =>   a + b,
 };
+ 
