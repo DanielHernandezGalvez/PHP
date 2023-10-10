@@ -11,7 +11,6 @@
         // array_push($vector, $i);
         $vector["numero-{$i}"] = $i;
      };
-     
 
      var_dump($vector);
 
