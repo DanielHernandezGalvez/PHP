@@ -1,6 +1,9 @@
 <?php
-    while( have_post () ):  the_post();
+    while( have_posts() ):  the_post();
 
+    the_title();
+
+    the_content();
     
     endwhile;
 ?>
