@@ -1,7 +1,7 @@
 /*
     Theme Name: Gym Fitness
     Theme URI: 
-    Author: Juan Pablo De la torre Valdez
+    Author: Daniel Galvez
     Author URI: http://twitter.com/codigoconjuan
     Description: Theme Diseñado para el Gimnasio GymFitness
     Version: 1.0
@@ -10,3 +10,7 @@
     Tags: Gym, gimnasio, flexbox, css grid, mobile first
     Text Domain: gymfitness
 */
+
+body{
+    background-color: rgb(216, 180, 180);
+}
