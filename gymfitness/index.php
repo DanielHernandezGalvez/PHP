@@ -11,13 +11,18 @@
     <header class="header">
         <div class="contenedor barra-navegacion">
             <div class="logo">
+                <!-- imagenes dinámicas -->
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="">
             </div>
-            <nav>
-                <a href="/nosotros">Nosotros</a>
-                <a href="/contacto">Contacto</a>
-                <a href="/blog">Blog</a>
-            </nav>
+            <?php
+            $args = array(
+                // theme location es para mostrar menus en diferenter lugares
+                "theme_location" => "menu-principal",
+                "container"=> "nav",,
+                "container_class"=> "menu-principal nav",
+            );
+            wp_nav_menu($args);
+            ?>
         </div>
     </header>
 
