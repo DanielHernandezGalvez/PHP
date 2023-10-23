@@ -1,13 +1,15 @@
 <?php
-
-function gymfitness_setup(){
+// Includes 
+require get_template_directory() ."./includes/widgets.php";
+function gymfitness_setup()
+{
     // imágenes destacadas, esto es para agregar imágenes desde wordpress
     add_theme_support("post-thumbnails");
 
     // Titulos para SEO, debes eliminar la etiqueta title en html
     add_theme_support("title-tag");
 }
-add_action("after_setup_theme","gymfitness_setup");
+add_action("after_setup_theme", "gymfitness_setup");
 
 function gymfitness_menus()
 {
@@ -29,3 +31,30 @@ function gymfitness_scripts_styles()
 }
 
 add_action("wp_enqueue_scripts", "gymfitness_scripts_styles");
+
+// Definir zona de widgets
+function gymfitness_widgets()
+{
+    register_sidebar(
+        array(
+            "name" => "Sidebar 1",
+            "id" => 'sidebar_1',
+            "before_widget" => '<div class="widget">',
+            "after_widget" => '</div>',
+            "before_title" => "<h3 class='text-center text-primary'>",
+            "after_title" => "</h3>",
+        )
+    );
+    register_sidebar(
+        array(
+            "name" => "Sidebar 2",
+            "id" => 'sidebar_2',
+            "before_widget" => '<div class="widget">',
+            "after_widget" => '</div>',
+            "before_title" => "<h3 class='text-center text-primary'>",
+            "after_title" => "</h3>",
+        )
+    );
+    // aqui puedes poner más widgets copiando y modificando el código de arriba
+}
+add_action("widgets_init", "gymfitness_widgets");
