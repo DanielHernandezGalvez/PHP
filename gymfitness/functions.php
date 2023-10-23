@@ -3,6 +3,9 @@
 function gymfitness_setup(){
     // imágenes destacadas, esto es para agregar imágenes desde wordpress
     add_theme_support("post-thumbnails");
+
+    // Titulos para SEO, debes eliminar la etiqueta title en html
+    add_theme_support("title-tag");
 }
 add_action("after_setup_theme","gymfitness_setup");
 
