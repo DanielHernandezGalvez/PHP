@@ -1,5 +1,11 @@
 <?php
 
+function gymfitness_setup(){
+    // imágenes destacadas, esto es para agregar imágenes desde wordpress
+    add_theme_support("post-thumbnails");
+}
+add_action("after_setup_theme","gymfitness_setup");
+
 function gymfitness_menus()
 {
     register_nav_menus(array(

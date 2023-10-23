@@ -84,9 +84,17 @@ img {
   height: auto;
 }
 
+.imagen-destacada{
+  margin-bottom: 3rem;
+}
+
 .contenedor {
   width: min(95%, 120rem);
   margin: 0 auto;
+}
+
+.contenido-centrado{
+  width: min(95%, 80rem);
 }
 
 /* Utilidades*/
@@ -154,6 +162,12 @@ img {
     position: relative;
     z-index: 1;
   }
+
+  .menu-principal .current_page_item {
+    border-bottom: 3px solid var(--primario);
+  }
+  
+
   .menu-principal a::before,
   .menu-principal a::after {
     position: absolute;
@@ -167,11 +181,6 @@ img {
     transform: scaleX(0);
     transition: transform 0.6s;
   }
-
-  .menu-principal .current_page_item {
-    border-bottom: 3px solid var(--primario);
-  }
-  
 
   .menu-principal a::before {
     top: 0;
