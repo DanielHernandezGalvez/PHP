@@ -32,7 +32,7 @@ get_header();
                     $hora_fin = get_field('hora_fin');
                     ?>
                     <!-- esto es nativo de advance custom fields -->
-                    <p><?php the_field('dias_clase'); ?> <?php echo $hora_inicio . " - " . $hora_fin;  ?></p>
+                    <p><?php the_field('dias_clase'); ?> <?php echo $hora_inicio . "  " . $hora_fin;  ?></p>
                 </div>
             </li>
         <?php

@@ -13,6 +13,7 @@
             <div class="logo">
                 <!-- imagenes dinámicas -->
                 <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="">
+                <!-- <h3 class="text-primary">Ecommerce</h3> -->
             </div>
             <?php
             $args = array(

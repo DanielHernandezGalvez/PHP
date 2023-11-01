@@ -10,7 +10,8 @@
             );
             wp_nav_menu($args);
             ?>
-        <p class="copyright"> &copy; reservado. <?php echo get_bloginfo('name')." ". date('Y'); ?></p>
+        <!-- <p class="copyright"> &copy; reservado. <?php echo get_bloginfo('name')." ". date('Y'); ?></p> -->
+        <p class="copyright"> &copy; Desarrollado por <?php echo "Wolf Marketing 360"." ". date('Y'); ?></p>
         </div>
     </footer>
     <!-- Esto pone el panel de administración al top del sitio -->
