@@ -6,11 +6,11 @@
  * en negritas
  */
 
- $texto = "";
+$texto = "";
 
- if(empty($texto)) {
+if (empty($texto)) {
     $texto = strtoupper("Texto de relleno");
     echo "<strong>{$texto}</strong>";
- } else {
-  echo "Esta relleno";
- }
+} else {
+    echo "Esta relleno";
+}

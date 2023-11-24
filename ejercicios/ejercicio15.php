@@ -6,14 +6,16 @@
  * el tipo de variable que sea
  */
 
- $matriz = array("hola", true, 4);
- $verdadero = true;
- $texto = "texto";
+$matriz = array("hola", true, 4);
+$verdadero = true;
+$texto = "texto";
 
-if(is_array($matriz)){ 
+if (is_array($matriz)) {
     echo "El array es un array <br>";
-} if(is_bool($verdadero)){
-  echo "el bool es bool <br>";
-} if (is_string($texto)){
-  echo "texto es un string";
+}
+if (is_bool($verdadero)) {
+    echo "el bool es bool <br>";
+}
+if (is_string($texto)) {
+    echo "texto es un string";
 }
