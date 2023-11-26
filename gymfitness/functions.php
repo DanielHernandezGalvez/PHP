@@ -1,6 +1,7 @@
 <?php
 // Includes 
 require get_template_directory() . "./includes/widgets.php";
+require get_template_directory() . "./includes/queries.php";
 function gymfitness_setup()
 {
     // imágenes destacadas, esto es para agregar imágenes desde wordpress
