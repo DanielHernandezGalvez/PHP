@@ -60,9 +60,39 @@ get_header();
     </div>
 </main>
 <section class="contenedor seccion">
-    <h2 class="text-primary">Nuestros Instructores </h2>
-<p>Instructores profesionales</p>
+    <h2 class="text-primary text-center">Nuestros Instructores </h2>
+    <p class="text-center">Instructores profesionales que te ayudaran a lograr tus objetivos</p>
+    <?php gymfitness_instructores(); ?>
 </section>
+
+<section class="testimoniales">
+    <h2 class="text-white text-center">Testimonios</h2>
+
+    <div class="contenedor-testimoniales swiper">
+        <?php gymfitness_testimoniales(); ?>
+    </div>
+</section>
+
+<section class="contenedor seccion">
+    <h2 class="text-primary text-center">Nuestro Blog </h2>
+    <p class="text-center">Aprende tips de nuestros instructores expertos</p>
+    <ul class="listado-grid">
+        <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => 2
+            );
+            $blog = new WP_Query($args);
+            while($blog->have_posts()){
+                $blog->the_post();
+
+                get_template_part("template-parts/blog");
+            }
+            wp_reset_postdata();
+        ?>
+    </ul>
+</section>
+
 <?php
 get_footer();
 ?>
