@@ -10,6 +10,14 @@ get_header();
         }
         ?>
     </ul>
+    <?php
+    // paginación
+        // Pagina siguiente
+        // posts_nav_link();
+
+        // paginación con números
+        the_posts_pagination();
+    ?>
 </main>
 <?php
 get_footer();

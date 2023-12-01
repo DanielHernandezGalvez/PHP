@@ -109,23 +109,27 @@ hr {
 
 /* botones */
 
+.form-submit .submit,
 .boton {
   background-color: var(--primario);
   color: var(--blanco);
   padding: 1rem 3rem;
   display: block;
   flex: 1;
+  width: 100%;
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
   border-radius: 0.5rem;
   margin: 1rem 0;
+  border: none;
 }
 
 @media (min-width: 768px) {
   .boton {
     display: inline-block;
     flex: 0 0 auto;
+    width: auto;
   }
 }
 
@@ -236,7 +240,7 @@ body.home .header {
   opacity: 0;
   max-height: 0;
   transition-delay: 100ms 300ms;
-  transition-property:  opacity max-height;
+  transition-property: opacity max-height;
   transition-timing-function: ease-in-out;
   transition-duration: 300ms;
 }
@@ -823,4 +827,52 @@ body.home .header {
 .ml2 .letter {
   display: inline-block;
   line-height: 1em;
+}
+
+/* Comentarios */
+
+.comentarios {
+  margin-top: 5rem;
+  width: min(95%, 60rem);
+  margin: 5rem auto 0 auto;
+}
+.comment-reply-title {
+  color: var(--primario);
+  text-align: center;
+}
+
+.logged-in-as a {
+  color: var(--primario);
+}
+
+.comment-form-comment label {
+  font-weight: bold;
+  margin: 2rem 0;
+  display: block;
+}
+
+.form-submit .submit {
+  background-color: var(--primario);
+  color: var(--blanco);
+}
+
+.comment-form-comment textarea,
+.comentarios input[type="text"] {
+  border: solid 1px var(--gris-claro);
+  width: 100%;
+  padding: 1rem;
+}
+
+.comentarios input[type="text"] {
+  margin: 0.5rem 0;
+}
+
+.comment-body{
+  justify-content: flex-start;
+  padding: auto 0 auto .5rem ;
+  text-align: start;
+}
+
+h3.comentarios{
+  margin: 3rem 0;
 }
