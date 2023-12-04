@@ -8,9 +8,11 @@ saludo($nombre);
 
 function sumar($numero1, $numero2){
     $resultado = $numero1 + $numero2;
-    echo $resultado;
+    return $resultado;
+    // echo $resultado;
 }
 echo "<br/>";
-sumar(3,56);
+$resultadi = sumar(3,56);
+echo $resultadi;
 
 ?>
