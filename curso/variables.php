@@ -9,7 +9,13 @@ $fibonacci = 0.332342343;
 define("PI", 3.1416);
 // echo PI;
 
-$semana = array("lunes", "martes", "miercoles", "jueves", "viernes");
+$semana = array(
+    "lunes",
+    "martes",
+    "miercoles",
+    "jueves",
+    "viernes"
+);
 $semana[10] = "Dinz kramer";
 
 # Array asociativo 
@@ -63,7 +69,14 @@ $meses = array(
     'octubre',
     'noviembre',
     'diciembre'
-)
+);
+
+$numeros = array(2,12,41,12,3,5,23,8);
+# mostrar en ordén alfabétoco
+
+sort($meses);
+# en reversa
+rsort($numeros);
 
 ?>
 
@@ -83,6 +96,10 @@ $meses = array(
         <?php
         foreach ($meses as $mes) {
             echo "<li>" . $mes . "</li>";
+        }
+        echo "<br />";
+        foreach ($numeros as $num) {
+            echo "<li>" . $num . "</li>";
         }
         ?>
     </ul>
