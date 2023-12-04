@@ -9,11 +9,11 @@
 
 -- */
 
-// $numero = 10;
-// $numero2 = 6;
+$numero = 10;
+$numero2 = 6;
 
-// $resultado = $numero + $numero2;
-// echo $resultado;
+$resultado = $numero + $numero2;
+echo $resultado;
 
 /* Operadores de Asignación:
 
@@ -25,16 +25,16 @@
 
 -- */
 
-// $numero = 10;
-// $numero2 = 5;
+$numero = 10;
+$numero2 = 5;
 
-// // $numero = $numero + 7;
-// $numero += 7;
-// echo $numero;
+// $numero = $numero + 7;
+$numero += 7;
+echo $numero;
 
 /* Operadores de Comparación:
 
-==
+== 
 ===
 !=, <>
 !==
