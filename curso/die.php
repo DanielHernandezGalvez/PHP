@@ -3,7 +3,7 @@
 echo "soy un echo";
 
 # quita todo debajo de esta función
-die();
+// die();
 
 ?>
 
