@@ -219,4 +219,12 @@ uksort — Ordena un array según sus claves usando una función de comparación
 usort — Ordena un array según sus valores usando una función de comparación definida por el usuario
 */
 
+$text = "< > & ' ";
+$text_usuario = "<h1>Hola mundo</h1>";
+# Evita que el usuario pueda meter código
+echo htmlspecialchars($text_usuario);
+echo $text_usuario;
+// echo start
+
+
 ?>
