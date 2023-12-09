@@ -13,5 +13,5 @@ $terminos = $_POST['terminos'];
 
 echo "hola $nombre eres $sexo ";
 
-$nombre = $_GET['nombre'];
-echo htmlspecialchars($nombre); // con esto se evitan los riesgos
+// $nombre = $_GET['nombre'];
+// echo htmlspecialchars($nombre); // con esto se evitan los riesgos

@@ -1,3 +1,8 @@
+<?php
+
+$_POST['nombre'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
