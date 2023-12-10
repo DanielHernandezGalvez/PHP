@@ -25,3 +25,4 @@ $alejandro->nombre = "Alejandro";
 $alejandro->edad = 22;
 $alejandro->pais = "Nicaragua";
 $alejandro->mostrar_info();
+?>
