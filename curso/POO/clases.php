@@ -38,3 +38,4 @@ $alejandro = new Persona;
 $alejandro->nombre = "alejandro";
 $alejandro->edad = 20;
 $alejandro->pais = "Colombia";
+ ?>
