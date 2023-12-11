@@ -12,7 +12,7 @@ class Persona
     }
 }
 
-$daniel = new Persona;
+// $daniel = new Persona;
 $daniel->nombre = "daniel";
 $daniel->edad = 25;
 $daniel->pais = "México";
@@ -20,7 +20,7 @@ $daniel->mostrar_info();
 
 echo "<br/>";
 
-$alejandro = new Persona;
+// $alejandro = new Persona;
 $alejandro->nombre = "Alejandro";
 $alejandro->edad = 22;
 $alejandro->pais = "Nicaragua";

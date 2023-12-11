@@ -31,3 +31,4 @@ $alejandro = new Persona("Alejandro", 22, "Nicaragua");
 // $alejandro->edad = 22;
 // $alejandro->pais = "Nicaragua";
 $alejandro->mostrar_info();
+?>
