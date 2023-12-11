@@ -11,5 +11,5 @@ class Estudiante extends Persona {
 
 }
 
-$carlos = new Estudiante;
+// $carlos = new Estudiante;
 echo $carlos->saludo();

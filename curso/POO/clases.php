@@ -25,7 +25,7 @@ class Persona
     }
 }
 
-$daniel = new Persona;
+// $daniel = new Persona;
 $daniel->nombre = "Daniel Alejandro";
 $daniel->edad = 23;
 $daniel->pais = "Monclova";
@@ -34,7 +34,7 @@ $daniel->mostrar_informacion();
 
 echo $daniel->nombre . " tiene " . $daniel->edad . " años.";
 
-$alejandro = new Persona;
+// $alejandro = new Persona;
 $alejandro->nombre = "alejandro";
 $alejandro->edad = 20;
 $alejandro->pais = "Colombia";
