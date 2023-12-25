@@ -13,21 +13,36 @@
         <h1>Artículos</h1>
         <section class="articulos">
             <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sit a iusto voluptates architecto aspernatur dolore error repellat, impedit quia quas facere suscipit incidunt fugit reiciendis repellendus. Eaque, deleniti deserunt!</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sit a iusto voluptates architecto aspernatur dolore error repellat, impedit quia quas facere suscipit incidunt fugit reiciendis repellendus. Eaque, deleniti deserunt!</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sit a iusto voluptates architecto aspernatur dolore error repellat, impedit quia quas facere suscipit incidunt fugit reiciendis repellendus. Eaque, deleniti deserunt!</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sit a iusto voluptates architecto aspernatur dolore error repellat, impedit quia quas facere suscipit incidunt fugit reiciendis repellendus. Eaque, deleniti deserunt!</li>
+                <?php foreach ($articulos as $articulo) :  ?>
+                    <li><?php echo $articulo['id'] . ".- " . $articulo["articulo"] ?></li>
+                <?php endforeach ?>
             </ul>
         </section>
         <section class="paginacion">
             <ul>
-                <li class="disabled">&laquo;</li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li>&raquo;</li>
+                <?php if ($pagina == 1) : ?>
+                    <li class="disabled">&laquo;</li>
+                <?php else :  ?>
+                    <li class="?pagina=<?php echo $pagina - 1 ?>"><a href="">&laquo;</a></li>
+                <?php endif;  ?>
+
+                <?php
+
+                for ($i = 1; $i < $numero_paginas; $i++) {
+                    if ($pagina == $i) {
+                        echo "<li class='active'><a href='?pagina=$i'>$i</a></li>";
+                    } else {
+                        echo "<li><a href='?pagina=$i'>$i</a></li>";
+                    }
+                }
+                ?>
+
+                <?php if ($pagina == $numero_paginas) : ?>
+                    <li class="disabled">&raquo;</li>
+                <?php else :  ?>
+                    <li class="?pagina=<?php echo $pagina + 1 ?>"><a href="">&raquo;</a></li>
+                <?php endif;  ?>
+
             </ul>
         </section>
 
