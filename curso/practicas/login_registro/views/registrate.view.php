@@ -31,7 +31,7 @@
 
         </form>
         <p class="texto-registrate">¿Ya tienes cuenta?
-            <a href="login.php">Inisiar sesión</a>
+            <a href="login.php">Iniciar sesión</a>
         </p>
     </div>
 </body>
