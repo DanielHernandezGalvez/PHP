@@ -1,48 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require "header.php"; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0(css/font-awesome.min.css">
-    <title>Blog</title>
-    <link rel="stylesheet" href="<?php echo RUTA; ?>css/estilos.css">
-</head>
+    <div class="contenedor">
 
-<body>
-    <header>
-        <div class="contenedor">
-
-            <div class="logo izquierda">
-                <p><a href="#">Mi primer blog</a></p>
-            </div>
-
-            <div class="derecha">
-
-                <form 
-                    name="busqueda" 
-                    class="buscar" 
-                    action="<?php echo RUTA; ?>/buscar.php" 
-                    method="get"
-                >
-                    <input type="text" name="busqueda" placeholder="Buscar">
-                    <button type="submit" class="icono fa fa-search"></button>
-                </form>
-
-                <nav class="menu">
-                    <ul>
-                        <li><a href="#">Github</a></li>
-                        <li><a href="#">Linkedin</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </nav>
-
-            </div>
+        <div class="post">
+            <article>
+                <h2 class="titulo">Título del artículo</h2>
+                <p class="fecha">1 de enero del 2023</p>
+                <div class="thumb">
+                    <a href="#">
+                        <img src="<?php echo RUTA; ?>/images/1.png" alt="">
+                    </a>
+                    <p class="extracto">Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Quibusdam ut sed voluptatem cum odio 
+                        maiores aspernatur eaque molestiae voluptas accusantium,
+                         fuga quidem delectus. Quia illum, asperiores non rerum 
+                         iste aliquid?
+                    </p>
+                    <a href="#" class="continuar">Leer más</a>
+                </div>
+            </article>
         </div>
-    </header>
-</body>
 
-</html>
+        <div class="post">
+            <article>
+                <h2 class="titulo">Título del artículo</h2>
+                <p class="fecha">1 de enero del 2023</p>
+                <div class="thumb">
+                    <a href="#">
+                        <img src="<?php echo RUTA; ?>/images/2.png" alt="">
+                    </a>
+                    <p class="extracto">Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Quibusdam ut sed voluptatem cum odio 
+                        maiores aspernatur eaque molestiae voluptas accusantium,
+                         fuga quidem delectus. Quia illum, asperiores non rerum 
+                         iste aliquid?
+                    </p>
+                    <a href="#" class="continuar">Leer más</a>
+                </div>
+            </article>
+        </div>
+
+        <?php require "paginacion.php"; ?>
+
+    </div>
+
+<?php require "footer.php"; ?>
