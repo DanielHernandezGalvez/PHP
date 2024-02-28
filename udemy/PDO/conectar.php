@@ -1,11 +1,11 @@
 <?php
-abstract class Conectar{
+abstract class Conectar {
 
     private $con;
 
     public function conectar() {
         try {
-            $this->con = new PDO("mysql:dbname=category;host=localhost", "root", "");
+            $this->con = new PDO("mysql:dbname=pdo;host=localhost;charset=utf8mb4", "root", "");
         } catch (PDOException $e) {
             die("error: $e");
         }
@@ -22,7 +22,7 @@ class Datos extends Conectar {
 
     private $db;
 
-    public function  __construct() {
+    public function __construct() {
         $this->db = parent::conectar();
         self::setNames();
     }
@@ -30,15 +30,17 @@ class Datos extends Conectar {
     public function getDatos($sql) {
         $datos = $this->db->prepare($sql);
         $datos->execute();
-        return $datos->fetchAll();
-        $this->db = null;
+        $result = $datos->fetchAll(); // Store the result before closing connection
+        $this->db = null; // Close connection here (optional)
+        return $result;
     }
 
     public function getDato($sql) {
         $datos = $this->db->prepare($sql);
         $datos->execute();
-        return $datos->fetch();
-        $this->db = null;
+        $result = $datos->fetch(); // Store the result before closing connection
+        $this->db = null; // Close connection here (optional)
+        return $result;
     }
 
     public function setDato($sql) {
