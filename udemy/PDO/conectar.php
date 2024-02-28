@@ -17,3 +17,33 @@ abstract class Conectar{
     }
 
 }
+
+class Datos extends Conectar {
+
+    private $db;
+
+    public function  __construct() {
+        $this->db = parent::conectar();
+        self::setNames();
+    }
+
+    public function getDatos($sql) {
+        $datos = $this->db->prepare($sql);
+        $datos->execute();
+        return $datos->fetchAll();
+        $this-bd = null;
+    }
+
+    public function getDato($sql) {
+        $datos = $this->db->prepare($sql);
+        $datos->execute();
+        return $datos->fetch();
+        $this-bd=null;
+    }
+
+    public function setDato($sql) {
+        $datos = $this-db-prepare($sql);
+        $datos->execute();
+    }
+
+}
