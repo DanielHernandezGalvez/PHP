@@ -13,7 +13,7 @@ abstract class Conectar{
     }
 
     public function setNames(){
-        return $yhis->query("SET NAMES utf-8")
+        return $this->con->query("SET NAMES utf-8");
     }
 
 }
@@ -31,18 +31,18 @@ class Datos extends Conectar {
         $datos = $this->db->prepare($sql);
         $datos->execute();
         return $datos->fetchAll();
-        $this-bd = null;
+        $this->db = null;
     }
 
     public function getDato($sql) {
         $datos = $this->db->prepare($sql);
         $datos->execute();
         return $datos->fetch();
-        $this-bd=null;
+        $this->db = null;
     }
 
     public function setDato($sql) {
-        $datos = $this-db-prepare($sql);
+        $datos = $this->db->prepare($sql);
         $datos->execute();
     }
 
