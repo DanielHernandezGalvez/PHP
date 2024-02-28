@@ -1,9 +1,12 @@
 <?php
-abstract class Conectar {
+
+abstract class Conectar
+{
 
     private $con;
 
-    public function conectar() {
+    public function conectar()
+    {
         try {
             $this->con = new PDO("mysql:dbname=pdo;host=localhost;charset=utf8mb4", "root", "");
         } catch (PDOException $e) {
@@ -12,22 +15,25 @@ abstract class Conectar {
         return $this->con;
     }
 
-    public function setNames(){
+    public function setNames()
+    {
         return $this->con->query("SET NAMES utf-8");
     }
-
 }
 
-class Datos extends Conectar {
+class Datos extends Conectar
+{
 
     private $db;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->db = parent::conectar();
         self::setNames();
     }
 
-    public function getDatos($sql) {
+    public function getDatos($sql)
+    {
         $datos = $this->db->prepare($sql);
         $datos->execute();
         $result = $datos->fetchAll(); // Store the result before closing connection
@@ -35,7 +41,8 @@ class Datos extends Conectar {
         return $result;
     }
 
-    public function getDato($sql) {
+    public function getDato($sql)
+    {
         $datos = $this->db->prepare($sql);
         $datos->execute();
         $result = $datos->fetch(); // Store the result before closing connection
@@ -43,9 +50,9 @@ class Datos extends Conectar {
         return $result;
     }
 
-    public function setDato($sql) {
+    public function setDato($sql)
+    {
         $datos = $this->db->prepare($sql);
         $datos->execute();
     }
-
 }

@@ -1,10 +1,7 @@
 <?php
 require_once("conectar.php");
 $d = new Datos();
-
-// Assuming your table name is 'pdo' and no join is needed
-$sql = "SELECT id, name, type, description FROM pdo ORDER BY id DESC;";
-$datos = $d->getDatos($sql);
-
+$datos = $d->getDatos(("select category.id, category.name, category.type, category.description as category from category
+inner join categoris on categorias.id = category.categorias_id order by category.id desc;
+"));
 print_r($datos);
-?>
