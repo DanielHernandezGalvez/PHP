@@ -1,4 +1,5 @@
 <?php
+
     require_once("conectar.php");
     $d = new Datos();
     $datos = $d->getDatos(("select category.id, category.name, category.type, category.description as category from category
